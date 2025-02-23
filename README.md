@@ -1,50 +1,65 @@
-# React + TypeScript + Vite
+# ⚡ React + TypeScript + Vite Template
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A minimal yet powerful template to kickstart React projects with TypeScript and Vite.
 
-Currently, two official plugins are available:
+## ✨ Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **React 19** – The latest React version.
+- **TypeScript** – Strongly typed JavaScript.
+- **Vite** – Lightning-fast build tool.
+- **Tailwind CSS** – Utility-first styling.
+- **Framer Motion** – Smooth animations for React.
+- **Prettier** – Automatic code formatting.
 
-## Expanding the ESLint configuration
+## 🚀 Getting Started
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+### Prerequisites
 
-- Configure the top-level `parserOptions` property like this:
+- Node.js (>= 14.x)
+- npm (>= 6.x)
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+### Installation
+
+1. Create a new project using `degit`:
+
+    ```sh
+    npx degit joaobartolot/vite-template my-project
+    cd my-project
+    ```
+
+2. Set up the project:
+
+    ```sh
+    npm run setup
+    ```
+
+### 🔧 Development
+
+Start the development server:
+
+```sh
+npm run dev
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### 📦 Production
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Build the project:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```sh
+npm run build
 ```
+
+Preview the production build:
+
+```sh
+npm run preview
+```
+
+## 📜 Scripts
+
+- `npm run dev` – Start the development server.
+- `npm run build` – Build for production.
+- `npm run preview` – Preview the production build.
+- `npm run setup` – Initial project setup.
+- `npm run update` – Update dependencies.
+- `npm run install-fonts` – Install Google Fonts.
